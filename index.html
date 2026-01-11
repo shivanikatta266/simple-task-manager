@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskMinder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">TaskMinder.</h2>
+    <ul>
+      <li class="nav active" data-page="dashboard">Dashboard</li>
+      <li class="nav" data-page="projects">Projects</li>
+      <li class="nav" data-page="tasks">Tasks</li>
+      <li class="nav">Calendar</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="page">
+      <h2>Dashboard</h2>
+      <p>Welcome 👋</p>
+      <div class="card">
+        Total Tasks: <span id="totalTasks">0</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS (unchanged placeholder) -->
+    <section id="projects" class="page hidden">
+      <h2>Projects</h2>
+      <div class="card">Website Redesign</div>
+      <div class="card">Mobile App</div>
+      <div class="card">Backend API</div>
+    </section>
+
+    <!-- TASKS -->
+    <section id="tasks" class="page hidden">
+
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="search-area">
+          <input id="searchInput" placeholder="Search">
+          <button class="icon-btn">🔔</button>
+        </div>
+        <button class="primary" id="addTaskBtn">+ New task</button>
+      </div>
+
+      <h2>Tasks</h2>
+
+      <!-- Board -->
+      <div class="board">
+
+        <div class="column todo">
+          <h3>To do</h3>
+          <div id="todo"></div>
+        </div>
+
+        <div class="column progress">
+          <h3>In progress</h3>
+          <div id="progress"></div>
+        </div>
+
+        <div class="column done">
+          <h3>Done</h3>
+          <div id="done"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
